@@ -1,0 +1,23 @@
+81 ?- consult(['c:/Users/fatim/Downloads/Lab04_family_facts.pl']).
+true.
+
+81 ?- female(X).
+X = sara ;
+X = nora.
+
+82 ?- male(_).
+true .
+
+83 ?- parent(G, P), parent(P, faisal).
+G = ali,
+P = muhammad .
+
+84 ?- parent(ahmad, X), female(X).
+X = sara ;
+X = nora .
+
+85 ?- parent(P, ahmad), parent(P, muhammad).
+P = ali.
+
+86 ?- parent(P, khan), parent(P, nora), male(khan).
+P = ahmad.

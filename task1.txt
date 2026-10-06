@@ -1,0 +1,68 @@
+ARTI 303 - Lab 4
+Task 1 
+
+60 ?- consult(['c:/Users/fatim/Desktop/task1.pl']).
+true.
+
+
+61 ?- house = house.
+true.
+
+Reason: Both terms are identical, so they can be unified.
+
+
+62 ?- edge(a,b) = edge(C,b).
+C = a.
+
+Reason: C can be unified with a, so both terms match.
+
+
+63 ?- house = abc.
+false.
+
+Reason: house and abc are different atoms, so they cannot be unified.
+
+
+64 ?- edge(a,d) = edge(C,B).
+C = a,
+B = d.
+
+Reason: C can be unified with a and B can be unified with d.
+
+
+65 ?- edge(C,B) = edge(a,d).
+C = a,
+B = d.
+
+Reason: C can be unified with a and B can be unified with d.
+
+
+66 ?- edge(A,f(g,h)) = edge(a,B).
+A = a,
+B = f(g, h).
+
+Reason: A can be unified with a and B can be unified with f(g,h).
+
+
+67 ?- edge(A,A) = edge(b,c).
+false.
+
+Reason: A must have the same value in both positions, but b and c are different, so unification fails.
+
+
+68 ?- edge(A,A) = edge(b,b).
+A = b.
+
+Reason: Both positions have the same value b, so A can be unified with b.
+
+
+69 ?- A = B, B = f.
+A = B, B = f.
+
+Reason: A and B are unified, and B is then unified with f.
+
+
+70 ?- A = B, B = f, A = e.
+false.
+
+Reason: A and B are unified, so when B becomes f, A must also be f. Therefore, A cannot also be e.
